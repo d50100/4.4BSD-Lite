@@ -39,10 +39,10 @@ typedef	u_long	tcp_seq;
  * Per RFC 793, September, 1981.
  */
 struct tcphdr {
-	u_short	th_sport;		/* source port */
-	u_short	th_dport;		/* destination port */
-	tcp_seq	th_seq;			/* sequence number */
-	tcp_seq	th_ack;			/* acknowledgement number */
+	u_short	th_sport;		/* source port 用于标识源端进程 */
+	u_short	th_dport;		/* destination port 用于标识目的端进程 */
+	tcp_seq	th_seq;			/* sequence number 用于标识具体的包 */
+	tcp_seq	th_ack;			/* acknowledgement number 确认的序号 */
 #if BYTE_ORDER == LITTLE_ENDIAN 
 	u_char	th_x2:4,		/* (unused) */
 		th_off:4;		/* data offset */
@@ -52,11 +52,11 @@ struct tcphdr {
 		th_x2:4;		/* (unused) */
 #endif
 	u_char	th_flags;
-#define	TH_FIN	0x01
-#define	TH_SYN	0x02
+#define	TH_FIN	0x01  // 用于拆除连接
+#define	TH_SYN	0x02  // 用于建立连接
 #define	TH_RST	0x04
 #define	TH_PUSH	0x08
-#define	TH_ACK	0x10
+#define	TH_ACK	0x10  // 标识是确认报文
 #define	TH_URG	0x20
 	u_short	th_win;			/* window */
 	u_short	th_sum;			/* checksum */
