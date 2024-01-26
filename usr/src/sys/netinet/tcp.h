@@ -85,7 +85,7 @@ struct tcphdr {
  * but 512 is probably more convenient.
  * This should be defined as MIN(512, IP_MSS - sizeof (struct tcpiphdr)).
  */
-#define	TCP_MSS	512
+#define	TCP_MSS	512  // MSS ( Maximum Segment Size ) 指定了TCP报文段中数据字段的最大长度，不包括TCP头部和IP头部的长度
 
 #define	TCP_MAXWIN	65535	/* largest value for (unscaled) window */
 
