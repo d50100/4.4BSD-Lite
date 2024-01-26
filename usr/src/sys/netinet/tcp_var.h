@@ -37,8 +37,8 @@
  * Kernel variables for tcp.
  */
 
-/*
- * Tcp control block, one per tcp; fields:
+/*   TCP控制块（TCB）是操作系统内核中用于跟踪和管理每个TCP连接的数据结构。
+ * Tcp control block, one per tcp; fields:   每个TCP连接都有一个相应的TCP控制块，其中包含了与该连接相关的状态信息、套接字选项、发送和接收缓冲区、定时器、序列号等重要的连接参数
  */
 struct tcpcb {
 	struct	tcpiphdr *seg_next;	/* sequencing queue */
