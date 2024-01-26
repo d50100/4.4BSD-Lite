@@ -55,7 +55,7 @@ struct tcphdr {
 #define	TH_FIN	0x01  // 用于拆除连接
 #define	TH_SYN	0x02  // 用于建立连接
 #define	TH_RST	0x04
-#define	TH_PUSH	0x08
+#define	TH_PUSH	0x08  // 连接已经建立完成，两个进程互发数据
 #define	TH_ACK	0x10  // 标识是确认报文
 #define	TH_URG	0x20
 	u_short	th_win;			/* window */
