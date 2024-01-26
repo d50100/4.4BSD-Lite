@@ -42,7 +42,7 @@ struct tcphdr {
 	u_short	th_sport;		/* source port 用于标识源端进程 */
 	u_short	th_dport;		/* destination port 用于标识目的端进程 */
 	tcp_seq	th_seq;			/* sequence number 用于标识具体的包 */
-	tcp_seq	th_ack;			/* acknowledgement number 确认的序号 */
+	tcp_seq	th_ack;			/* acknowledgement number 确认的序号 （表示之前序号的报文都收到了，需要接收这个序号的报文） */
 #if BYTE_ORDER == LITTLE_ENDIAN 
 	u_char	th_x2:4,		/* (unused) */
 		th_off:4;		/* data offset */
