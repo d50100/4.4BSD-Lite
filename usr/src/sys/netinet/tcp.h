@@ -59,7 +59,7 @@ struct tcphdr {
 #define	TH_ACK	0x10  // 标识是确认报文
 #define	TH_URG	0x20
 	u_short	th_win;			/* window */
-	u_short	th_sum;			/* checksum */
+	u_short	th_sum;			/* checksum  检验和 用于差错控制 */
 	u_short	th_urp;			/* urgent pointer */
 };
 
