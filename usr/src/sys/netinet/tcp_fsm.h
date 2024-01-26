@@ -34,11 +34,11 @@
  */
 
 /*
- * TCP FSM state definitions.
+ * TCP FSM state definitions.   有限状态机
  * Per RFC793, September, 1981.
  */
 
-#define	TCP_NSTATES	11
+#define	TCP_NSTATES	11  // 11个状态 包括：  关闭 1个 建立完成 1个  建立中3个 拆除 6个
 
 #define	TCPS_CLOSED		0	/* closed */
 #define	TCPS_LISTEN		1	/* listening for connection */
