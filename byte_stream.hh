@@ -1,6 +1,6 @@
 
 
-// LAB0  实验一  《 有序字节流 》
+// LAB0  实验0  《 有序字节流 》
 
 /*
 	in-order byte stream
